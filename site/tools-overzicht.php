@@ -25,7 +25,7 @@ $producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
@@ -40,7 +40,9 @@ $producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </tr>
         <tr>
             <?php foreach ($producten as $product) : ?>
-                <td><?php echo $product["tool_name"] ?></td>
+                <td>
+                    <a href="tools-detail.php?tool_id=<?php echo $product["tool_id"]?>"><?php echo $product["tool_name"] ?></a>
+                </td>
                 <td><?php echo $product["tool_category"] ?></td>
                 <td><?php echo $product["tool_price"] ?></td>
                 <td><?php echo $product["tool_brand"] ?></td>
