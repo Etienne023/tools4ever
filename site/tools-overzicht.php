@@ -15,20 +15,40 @@ $result = mysqli_query($conn, $sql);
  * voor bijvoorbeeld producten $all_products heten.
  * Maar dit kies je zelf
  */
-$all_producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$producten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
 
-       <?php var_dump($all_producten) ?>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>brand</th>
+        </tr>
+        <tr>
+            <?php foreach ($producten as $product) : ?>
+                <td><?php echo $product["tool_name"] ?></td>
+                <td><?php echo $product["tool_category"] ?></td>
+                <td><?php echo $product["tool_price"] ?></td>
+                <td><?php echo $product["tool_brand"] ?></td>
+             
+        </tr>
+    <?php endforeach ?>
+    </table>
 
 </body>
+
 </html>
