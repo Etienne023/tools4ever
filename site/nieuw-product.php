@@ -10,23 +10,24 @@
 </head>
 
 <body>
-    <form action="" method="post">
+    <h1>nieuw product maken </h1>
+    <form action="verwerk-nieuw-product.php" method="post">
         <div class="form-groep">
             <label for="NaamProduct">naam product</label>
-            <input type="text" name="" id="NaamProduct">
+            <input type="text" name="NaamProduct" id="NaamProduct">
         </div>
         <div class="form-groep">
             <label for="catogorieProduct">catogorie product</label>
-            <input type="text" name="" id="catogorieProduct">
+            <input type="text" name="catogorieProduct" id="catogorieProduct">
         </div>
         <div class="form-groep">
             <label for="prijsProduct">prijs product</label>
-            <input type="text" name="" id="prijsProduct">
+            <input type="text" name="prijsProduct" id="prijsProduct">
 
         </div>
         <div class="form-groep">
             <label for="merkProduct">merk product</label>
-            <input type="text" name="" id="merkProduct">
+            <input type="text" name="merkProduct" id="merkProduct">
         </div>
 
 
@@ -36,7 +37,7 @@
 
 
 
-        <button type="submit">verzend</button>
+        <button type="submit">maak nieuw product </button>
     </form>
 </body>
 
